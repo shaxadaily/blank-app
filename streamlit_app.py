@@ -208,7 +208,7 @@ def change_arrow(val):
 
 @st.cache_data(show_spinner=False)
 def train_models(csv_bytes):
-    df = pd.read_csv(io.BytesIO(csv_bytes))
+    df = pd.read_csv("./bisoprolol_final.csv")
 
     col_map = {c: c.strip() for c in df.columns}
     df.rename(columns=col_map, inplace=True)
